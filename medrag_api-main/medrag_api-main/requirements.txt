@@ -1,0 +1,36 @@
+# --- API & framework ---
+fastapi==0.111.0
+uvicorn[standard]==0.30.3
+gunicorn==22.0.0
+python-dotenv==1.0.1
+
+# --- Auth & security ---
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+email-validator==2.1.1
+
+# --- Azure Cosmos DB ---
+azure-cosmos==4.6.0
+
+# --- HTTP & utilities ---
+requests==2.32.3
+urllib3==1.26.18     # pin <2 so `from urllib3.util import Retry` works
+
+# --- Retrieval / ranking ---
+rank-bm25==0.2.2
+numpy==1.26.4
+
+# --- Embeddings (LlamaIndex + HuggingFace) ---
+llama-index==0.10.30
+llama-index-embeddings-huggingface==0.1.4
+sentence-transformers==2.6.1
+
+# --- Torch (CPU) ---  # >=2.6 to satisfy transformers' torch.load guard
+torch==2.8.0
+safetensors>=0.4.5
+
+# --- Vector DB cache (optional) ---
+qdrant-client==1.9.1
+
+# --- Settings (Pydantic v2 helpers) ---
+pydantic-settings>=2.5,<3
